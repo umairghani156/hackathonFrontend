@@ -8,7 +8,7 @@ const Signup = () => {
     const [password, setPassword] = useState('')
     const [cPassword, setCPassword] = useState('')
     const signUpHandler = async (e)=>{
-        e.preventDefault()
+       e.preventDefault()
        const response = await axios.post("https://hackathonbackend-alpha.vercel.app/api/auth/signup", {firstName,lastName,email,password,cPassword});
        console.log(response);
        localStorage.setItem("token",response.data.token);
